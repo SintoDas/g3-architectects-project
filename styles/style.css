@@ -71,12 +71,13 @@ main {
 .team-container {
   display: flex;
   align-items: center;
-  margin: 4rem auto;
 }
 .team-work-images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
+  margin-left: 5rem;
+  margin-top: 2rem;
 }
 .team-work-images img {
   width: 100%;
@@ -107,6 +108,9 @@ main {
   margin-top: 130px;
   gap: 100px;
 }
+.futures-container .cards {
+  margin-left: 5rem;
+}
 .futures-container .card {
   border-radius: 8px;
   background-color: #fff;
@@ -135,8 +139,10 @@ main {
   margin-bottom: 1.5rem;
 }
 .architect-img img {
-  height: 90%;
-  margin-left: 4rem;
+  width: min-content;
+}
+.architect-img {
+  margin-right: 4rem;
 }
 .ten-years-badge {
   border-radius: 8px;
@@ -157,16 +163,80 @@ main {
   font-size: 1.5rem;
   font-weight: 500;
 }
+/* Contribution-container */
+.contribution-container .cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 6rem;
+  gap: 1rem;
+}
+.contribution-container .icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  border: 1px solid #ff900e;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding: 2rem;
+  text-align: center;
+}
+.contribution-content {
+  margin-left: 5rem;
+}
+.contribution-content p {
+  margin-top: 1rem;
+  width: 50%;
+  margin-bottom: 1rem;
+}
+.contribution-title {
+  color: #131313;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.stats {
+  color: #424242;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.icon-p {
+  color: #727272;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.icon img {
+  margin-top: 1rem;
+}
 
 /*Responsive  */
-/* Moblile */
+/* Mobile */
 @media screen and (max-width: 576px) {
   header {
-    padding: 1rem;
+    padding: 0.5rem;
   }
-  nav {
+  nav,
+  nav > ul,
+  .team-container,
+  .futures-container,
+  .contribution-container .cards {
     flex-direction: column;
-    padding: 1rem;
+  }
+  .nav-title {
+    font-size: 2rem;
+  }
+  .team-work-images {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .architect-img img {
+    width: 100%;
+  }
+  .ten-years-badge {
+    position: static;
+    min-width: 300px;
   }
   /* nav > ul {
     flex-direction: column;
@@ -175,23 +245,16 @@ main {
 /* Medium */
 @media screen and (min-width: 577px) and (max-width: 960px) {
   header {
-    padding: 2rem;
+    padding: 1rem;
   }
   nav,
   .team-container,
-  .futures-container {
+  .futures-container,
+  .contribution-container .cards {
     flex-direction: column;
   }
   .team-work-images {
     display: grid;
     grid-template-columns: 1fr;
-  }
-  .cards {
-    padding-left: 2rem;
-  }
-  .ten-years-badge {
-    position: static;
-    width: 90%;
-    min-width: 300px;
   }
 }
